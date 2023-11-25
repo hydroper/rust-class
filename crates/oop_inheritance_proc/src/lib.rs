@@ -290,13 +290,14 @@ fn parse_class_oop_inheritance_crate_ref(input: ParseStream) -> Result<Path> {
 ///
 /// class! {
 ///     struct MyClass: SuperClass1 < SuperClassN < Node {
-///         // fn x(): f64
-///         // fn set_x(x: f64): Self
+///         // fn x() -> f64
+///         // fn set_x(x: f64) -> Self
 ///         x: f64 = 0.0,
-///         // fn y(): Arc<f64>
-///         // fn set_y(y: Arc<f64>): Self
+///         // fn y() -> Arc<f64>
+///         // fn set_y(y: Arc<f64>) -> Self
 ///         ref y: f64 = 0.0,
 ///     }
+///     // fn new() -> Self
 ///     fn constructor() {
 ///         super();
 ///     }
