@@ -11,10 +11,10 @@ class! {
     struct C0: Node {
         // fn x() -> f64
         // fn set_x(x: f64) -> Self
-        x: f64,
+        x: f64 = 0.0,
         // fn x() -> Arc<f64>
         // fn set_x(x: Arc<f64>) -> Self
-        ref y: f64,
+        ref y: f64 = 0.0,
     }
     // C0::new()
     fn constructor() {
